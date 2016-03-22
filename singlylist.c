@@ -31,7 +31,6 @@ int main(void)
         return -1;
     }
     
-    // char* s = "hello";
     
     while(true)
     {
@@ -43,7 +42,6 @@ int main(void)
         }while(strncmp(s, "", sizeof(s) + 1) == 0);    
         
          int x;
-        // int count = 0; // keep track of the first node
         
         if(strncmp(s, "insert", sizeof(s) + 1) == 0)
         {
@@ -116,12 +114,7 @@ sll* insert(int n, sll* head)
         head->next = NULL;
         return head;
     }    
-    sll* ptr = malloc(sizeof(sll));
-    // if(count = 0)
-    // {
-    //     ptr->next = NULL;
-    //     count++;
-    // } 
+    sll* ptr = malloc(sizeof(sll)); 
     ptr->n = n;
     ptr->next = head;
     head = ptr;
