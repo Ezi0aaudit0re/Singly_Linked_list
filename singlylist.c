@@ -98,7 +98,11 @@ bool search(int n, sll* head)
         if( ptr->n == n )
             return true;
         ptr = ptr->next;    
-    }while(ptr->next != NULL);      
+    }while(ptr->next != NULL); 
+    
+    // check the last node
+    if(ptr->n == n)
+        return true;
     return false; 
 }
 
@@ -114,7 +118,7 @@ sll* insert(int n, sll* head)
         head->next = NULL;
         return head;
     }    
-    sll* ptr = malloc(sizeof(sll)); 
+    sll* ptr = malloc(sizeof(sll));
     ptr->n = n;
     ptr->next = head;
     head = ptr;
