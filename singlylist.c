@@ -98,11 +98,8 @@ bool search(int n, sll* head)
         if( ptr->n == n )
             return true;
         ptr = ptr->next;    
-    }while(ptr->next != NULL); 
+    }while(ptr != NULL); 
     
-    // check the last node
-    if(ptr->n == n)
-        return true;
     return false; 
 }
 
